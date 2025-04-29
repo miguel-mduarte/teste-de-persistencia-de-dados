@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-BR">
+<!-- Define o idioma da página como português do Brasil -->
+
+<head>
+    <!-- Cabeçalho da página -->
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8, que suporta caracteres especiais como acentos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define a página como responsiva, ajustando o layout para diferentes tamanhos de tela -->
+    <title>Formulário com Cards</title>
+    <!-- Define o título da página que será exibido na aba do navegador -->
+
+    <!-- Importa o CSS do Bootstrap para estilização -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- O Bootstrap é uma biblioteca CSS que facilita a criação de layouts responsivos e estilizados -->
+
+    <!-- Importa o arquivo CSS personalizado -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Este arquivo contém estilos adicionais ou sobrescritos para personalizar o design -->
+</head>
+
+<body>
+    <!-- Corpo da página -->
+    <div class="container">
+        <!-- Contêiner principal que centraliza o conteúdo e aplica margens automáticas -->
+        <div class="form-container">
+            <!-- Contêiner do formulário com estilos personalizados -->
+            <h2 class="text-center">Criar um Card</h2>
+            <!-- Título do formulário, centralizado horizontalmente com a classe `text-center` -->
+            <form id="cardForm">
+                <!-- Formulário para criar um card -->
+                <div class="mb-3">
+                    <!-- Grupo de entrada para o título -->
+                    <label for="titulo" class="form-label">Título</label>
+                    <!-- Rótulo para o campo de entrada do título -->
+                    <input type="text" class="form-control" id="titulo" placeholder="Digite o título" required>
+                    <!-- Campo de entrada de texto para o título do card -->
+                    <!-- `class="form-control"` aplica o estilo do Bootstrap -->
+                    <!-- `placeholder` exibe um texto de exemplo dentro do campo -->
+                    <!-- `required` torna o campo obrigatório -->
+                </div>
+                <div class="mb-3">
+                    <!-- Grupo de entrada para a descrição -->
+                    <label for="descricao" class="form-label">Descrição</label>
+                    <!-- Rótulo para o campo de entrada da descrição -->
+                    <textarea class="form-control" id="descricao" rows="3" placeholder="Digite a descrição" required></textarea>
+                    <!-- Campo de texto para a descrição do card -->
+                    <!-- `rows="3"` define a altura inicial do campo em 3 linhas -->
+                </div>
+                <div class="mb-3">
+                    <!-- Grupo de entrada para o upload de imagem -->
+                    <label for="imagem" class="form-label">Imagem</label>
+                    <!-- Rótulo para o campo de upload de imagem -->
+                    <input type="file" class="form-control" id="imagem" accept="image/*" required>
+                    <!-- Campo para selecionar um arquivo de imagem -->
+                    <!-- `accept="image/*"` restringe o upload apenas a arquivos de imagem -->
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Criar Card</button>
+                <!-- Botão para enviar o formulário -->
+                <!-- `class="btn btn-primary"` aplica o estilo de botão do Bootstrap -->
+                <!-- `w-100` define a largura do botão como 100% do contêiner pai -->
+            </form>
+        </div>
+
+        <div class="card-container" id="cardContainer">
+            <!-- Contêiner onde os cards serão adicionados dinamicamente -->
+            <!-- Este elemento será manipulado pelo JavaScript para exibir os cards criados -->
+        </div>
+    </div>
+
+    <!-- Importa o JavaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- O Bootstrap JS é usado para funcionalidades interativas, como modais e dropdowns -->
+
+    <!-- Importa o arquivo JavaScript personalizado -->
+    <script src="script.js"></script>
+    <!-- Este arquivo contém o código JavaScript que manipula o formulário e os cards -->
+</body>
+
+</html>

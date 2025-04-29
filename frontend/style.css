@@ -1,0 +1,57 @@
+/* Estiliza o corpo da página */
+body {
+    background-color: #1a1a2e; /* Define a cor de fundo como um tom escuro */
+    color: #fff; /* Define a cor do texto como branco */
+}
+
+/* Estiliza o contêiner do formulário */
+.form-container {
+    margin: 20px auto; /* Adiciona uma margem de 20px em cima e embaixo, e centraliza horizontalmente */
+    max-width: 600px; /* Define a largura máxima do contêiner como 600px */
+    padding: 20px; /* Adiciona um espaçamento interno de 20px em todos os lados */
+    background-color: #2a2a3e; /* Define a cor de fundo do contêiner como um tom mais claro que o fundo da página */
+    border-radius: 10px; /* Arredonda os cantos do contêiner com um raio de 10px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra ao redor do contêiner */
+    /* A sombra é composta por:
+       - 0: deslocamento horizontal (sem deslocamento)
+       - 4px: deslocamento vertical (sombra abaixo do elemento)
+       - 8px: desfoque da sombra
+       - rgba(0, 0, 0, 0.2): cor preta com 20% de opacidade */
+}
+
+/* Estiliza o botão principal */
+.btn-primary {
+    background-color: #6a0dad; /* Define a cor de fundo do botão como roxo */
+    border-color: #6a0dad; /* Define a cor da borda do botão como roxo */
+}
+
+/* Estiliza o botão principal ao passar o mouse */
+.btn-primary:hover {
+    background-color: #7b1fa2; /* Altera a cor de fundo para um roxo mais claro */
+    border-color: #7b1fa2; /* Altera a cor da borda para combinar com o fundo */
+}
+
+/* Estiliza o contêiner dos cards */
+.card-container {
+    display: grid; /* Define o layout como grid (grade), permitindo organizar os elementos em linhas e colunas */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Define como as colunas da grade serão organizadas:
+       - `repeat(auto-fit, ...)`: Cria automaticamente o número de colunas que cabem no espaço disponível.
+       - `minmax(300px, 1fr)`: Define que cada coluna terá no mínimo 300px e no máximo 1fr.
+         - `300px`: Largura mínima de cada coluna.
+         - `1fr`: Fraciona o espaço restante igualmente entre as colunas. "fr" significa "fração". */
+    gap: 20px; /* Define o espaçamento entre os elementos da grade (tanto horizontal quanto vertical) */
+    padding: 20px; /* Adiciona um espaçamento interno ao redor do contêiner */
+}
+
+/* Estiliza os cards */
+.card {
+    background-color: #2a2a3e; /* Define a cor de fundo do card como um tom mais claro que o fundo da página */
+    border: 1px solid #6a0dad; /* Adiciona uma borda roxa ao redor do card */
+    color: #fff; /* Define a cor do texto como branco */
+}
+
+/* Estiliza o título do card */
+.card-title {
+    color: #6a0dad; /* Define a cor do texto do título como roxo */
+}
